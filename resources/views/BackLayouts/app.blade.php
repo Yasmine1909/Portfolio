@@ -50,7 +50,7 @@
               </a>
           </li>
           <li>
-              <a href="#">
+              <a href="/admin.create_education">
                   <span class="icon"><i class="fas fa-graduation-cap"></i></span>
                   <span class="item">Education</span>
               </a>

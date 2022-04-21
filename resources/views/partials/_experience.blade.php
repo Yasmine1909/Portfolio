@@ -1,6 +1,6 @@
 <section class="resume-section" id="experience">
     <div class="resume-section-content">        
-        <h2 class="mb-5">Experiences:</h2>        
+        <h2 class="mb-5">Experience</h2>        
         
         
         @foreach ($experiences  as $experience)
