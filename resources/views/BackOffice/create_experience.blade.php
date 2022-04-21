@@ -7,28 +7,44 @@
     <div class="row">
         <h1 class="text-center text-secondary"> Create New Experience</h1>
         <form class="form-group col-md-6 offset-3" action="/store_experience" method="post" >
-
+                         
             @csrf
+
             <label for="start_date  " class="text-secondary mt-2">Title </label>
-            <input class="form-control " name="title" type="text" >
+            <input class="form-control @error('title') is-invalid @enderror" name="title" type="text" >             
+            @error('title')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror   
 
             <label for="start_date  " class="text-secondary mt-2">Company Name</label>
-            <input class="form-control " name="company_name" type="text">
+            <input class="form-control @error('company_name') is-invalid @enderror" name="company_name" type="text">             
+            @error('company_name')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
 
             <label for="start_date  " class="text-secondary mt-2">Started at</label>
-            <input type="date" name="start_date"  class="form-control">
+            <input type="date" name="start_date"  class="form-control @error('start_date') is-invalid @enderror">
+            @error('start_date')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
 
             <label for="end_date " class="text-secondary mt-2">To</label>
-            <input type="date" name="end_date"  class="form-control">
+            <input type="date" name="end_date"  class="form-control @error('end_date') is-invalid @enderror">
+            @error('end_date')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
 
             <div class="form-floating mt-2">
-                    <textarea name="description"   style="height:100px" class="form-control"></textarea>
+                    <textarea name="description"   style="height:100px" class="form-control @error('description') is-invalid @enderror"></textarea>
                     <label for="floatingTextarea2" class="text-secondary">Description</label>
             </div>
+            @error('description')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             <button class="mt-3 btn btn-primary form-control">Add</button>
-
-
-            
+                         
+                         
+                                       
         </form>
     
     </div>
@@ -60,8 +76,8 @@
                         <form action="/destroy_experience/{{$experience->id}}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
-                            <a href="/admin.show_experience/{{$experience->id}}" class="btn btn-warning mt-1"><i class="fas fa-edit"></i> Edit</a>
+                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                            <a href="/admin.show_experience/{{$experience->id}}" class="btn btn-warning mt-1"><i class="fas fa-edit"></i></a>
                         </form>
                     </td>
                 </tr>
@@ -77,3 +93,23 @@
 </div>
 
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

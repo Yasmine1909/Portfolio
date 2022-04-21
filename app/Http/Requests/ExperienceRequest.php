@@ -6,14 +6,14 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ExperienceRequest extends FormRequest
 {
-    /**
+    /**                          
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class ExperienceRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title'=>['required','max:100'],
+            'company_name'=>['required','max:200'],
+            'description'=>['required'],
+            'start_date'=>['required','date'],
+            'end_date'=>['required','date','after:start_date']
         ];
     }
 }
