@@ -1,6 +1,8 @@
+
 @extends('..BackLayouts.app')
 @section('content')
-    
+
+
 <div class="container mt-4">
     <div class="row">
         <h1 class="text-center text-secondary"> Create New Experience</h1>
@@ -58,8 +60,8 @@
                         <form action="/destroy_experience/{{$experience->id}}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                            <a href="/admin.show_experience/{{$experience->id}}" class="btn btn-warning mt-1"><i class="fas fa-edit"></i> Edit</a>
                         </form>
                     </td>
                 </tr>

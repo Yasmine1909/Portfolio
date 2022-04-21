@@ -30,5 +30,20 @@ class ExperienceController extends Controller
         Experience::findorFail($id)->delete();
         return back();
     }
-    
+
+    public function show_experience($id)
+    {
+        return view('BackOffice.show_experience',['experience'=>Experience::findorFail($id)]);
+    }
+    public function update_experience(Request $req,$id)
+    {
+        $experience=Experience::findOrFail($id);
+         $experience->title=$req->title;
+        $experience->company_name=$req->company_name;
+        $experience->description=$req->description;
+        $experience->start_date=$req->start_date;
+        $experience->end_date=$req->end_date;
+        $experience->save();
+        return back();
+    }
 }

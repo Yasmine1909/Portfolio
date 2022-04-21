@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[ShowController::class,'show']);
 
 
-Route::get('create_experience',[ExperienceController::class,'create_experience']);
+Route::get('admin.create_experience',[ExperienceController::class,'create_experience']);
 Route::post('store_experience',[ExperienceController::class,'store_experience']);
 Route::delete('destroy_experience/{id}',[ExperienceController::class,'destroy_experience']);
+Route::get('admin.show_experience/{id}',[ExperienceController::class,'show_experience']);
+Route::put('admin.update_experience/{id}',[ExperienceController::class,'update_experience']);
