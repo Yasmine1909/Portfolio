@@ -30,7 +30,7 @@ class ProfileRequest extends FormRequest
             'phone'=>['required'],
             'adress'=>['required'],
             'bio'=>['required'],
-            'photo'=>['mimes:jpg,bmp,png,jpeg'],
+            'photo'=>['mimes:jpg,bmp,png,jpeg','nullable'],
             'linkedin'=>['url','nullable'],
             'github'=>['url','nullable'],
         ];

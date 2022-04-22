@@ -46,3 +46,6 @@ Route::put('admin.update_award/{id}',[AwardController::class,'update_award']);
 //Profile
 Route::get('admin.create_profile',[ProfileController::class,'create_profile']);
 Route::post('admin.store_profile',[ProfileController::class,'store_profile']);
+Route::delete('admin.destroy_profile/{id}',[ProfileController::class,'destroy_profile']);
+Route::get('admin.show_profile/{id}',[ProfileController::class,'show_profile']);
+Route::put('admin.update_profile/{id}',[ProfileController::class,'update_profile']);

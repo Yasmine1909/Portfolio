@@ -6,9 +6,11 @@
         <div class="col-md-6 offset-3">
             <ul class="list-group">
                 <li class="list-group-item"><span class="fw-bold"></span>
-                    <form action="" method="post">
+                    <form action="admin.destroy_profile/{{$profile->id}}" method="post">
+                        @csrf
+                        @method('DELETE')
                         <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        <a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                        <a href="admin.show_profile/{{$profile->id}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                     </form>
                 </li>
                 <li class="list-group-item text-center">
