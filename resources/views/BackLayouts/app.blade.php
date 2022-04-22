@@ -26,8 +26,9 @@
   </div>
   <div class="sidebar">
       <div class="profile">
-          <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="profile_picture">
-          <h3>Anamika Roy</h3>
+          {{-- <img src="{{Storage::url(Auth::user()->profile->photo)}}" alt="profile_picture"> --}}
+          <img src="{{asset('storage/'.Auth::user()->profile->photo)}}">
+          <h3>{{Auth::user()->name}}</h3>
           <p>Designer</p>
       </div>
       <ul>
