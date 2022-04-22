@@ -29,7 +29,7 @@
           {{-- <img src="{{Storage::url(Auth::user()->profile->photo)}}" alt="profile_picture"> --}}
           <img src="{{asset('storage/'.Auth::user()->profile->photo)}}">
           <h3>{{Auth::user()->name}}</h3>
-          <p>Designer</p>
+          
       </div>
       <ul>
           <li>
