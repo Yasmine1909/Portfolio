@@ -44,7 +44,7 @@
               </a>
           </li>
           <li>
-              <a href="#">
+              <a href="admin.create_award">
                   <span class="icon"><i class="fa fa-award"></i></span>
                   <span class="item">Awards & Certifications</span>
               </a>
