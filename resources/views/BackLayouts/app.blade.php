@@ -38,9 +38,9 @@
               </a>
           </li>
           <li>
-              <a href="#">
-                  <span class="icon"><i class="fas fa-info"></i></span>
-                  <span class="item">About</span>
+              <a href="admin.create_profile">
+                  <span class="icon"><i class="fas fa-user"></i></span>
+                  <span class="item">Profile</span>
               </a>
           </li>
           <li>
