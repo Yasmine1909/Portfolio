@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 class ProfileController extends Controller
 {
     public function create_profile(){
-        return view('BackOffice.create_profile');
+        return view('BackOffice.profile',['profile'=>Profile::first()]);
     }
     
     public function store_profile(ProfileRequest $req){

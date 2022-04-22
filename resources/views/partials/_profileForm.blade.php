@@ -1,9 +1,8 @@
 
-@extends('..BackLayouts.app')
-@section('content')
 
+   
 
-<div class="container mt-4">
+<div class="container mt-5 mb-5">
     <div class="row">
         <h1 class="text-center text-secondary"> Create Your Profile <i class="fas fa-user"></i></h1>
         <form class="form-group col-md-6 offset-3"  enctype="multipart/form-data" action="/admin.store_profile" method="post" >
@@ -75,26 +74,3 @@
     
     </div>
 </div>
-
-
-@endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
