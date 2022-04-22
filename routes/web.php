@@ -39,3 +39,5 @@ Route::put('admin.update_education/{id}',[EducationController::class,'update_edu
 Route::get('admin.create_award',[AwardController::class,'create_award']);
 Route::post('admin.store_award',[AwardController::class,'store_award']);
 Route::delete('admin.destroy_award/{id}',[AwardController::class,'destroy_award']);
+Route::get('admin.show_award/{id}',[AwardController::class,'show_award']);
+Route::put('admin.update_award/{id}',[AwardController::class,'update_award']);
