@@ -28,4 +28,20 @@ class EducationController extends Controller
             return back();
     }
     
+    public function show_education($id){
+
+        return view('BackOffice.show_education',['education'=>Education::findorFail($id)]);
+    }
+    public function update_education(EducationRequest $req,$id)
+    {
+        $education=Education::findOrFail($id);
+        $education->school_name=$req->school_name;
+        $education->degree=$req->degree;
+        $education->description=$req->description;
+        $education->start_date=$req->start_date;
+        $education->end_date=$req->end_date;
+        $education->save();
+        return back();
+    }
+    
 }

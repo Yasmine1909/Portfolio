@@ -31,3 +31,5 @@ Route::put('admin.update_experience/{id}',[ExperienceController::class,'update_e
 Route::get('admin.create_education',[EducationController::class,'create_education']);
 Route::post('admin.store_education',[EducationController::class,'store_education']);
 Route::delete('admin.destroy_education/{id}',[EducationController::class,'destroy_education']);
+Route::get('admin.show_education/{id}',[EducationController::class,'show_education']);
+Route::put('admin.update_education/{id}',[EducationController::class,'update_education']);

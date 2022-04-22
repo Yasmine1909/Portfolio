@@ -79,6 +79,7 @@
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                            <a href="/admin.show_education/{{$education->id}}" class="btn btn-warning mt-1"><i class="fas fa-edit"></i></a>
                         </form>
                     </td>
                 </tr>
