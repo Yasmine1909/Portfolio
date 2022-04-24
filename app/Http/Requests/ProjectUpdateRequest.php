@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProjectRequest extends FormRequest
+class ProjectUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,7 @@ class ProjectRequest extends FormRequest
         return [
             'title'=>['required','max:150'],
             'description'=>['required','max:2000'],
-            'photo'=>['required','mimes:jpg,bmp,png,jpeg,svg'],
+            'photo'=>['mimes:jpg,bmp,png,jpeg,svg'],
             'repository'=>['required','url'],
         ];
     }

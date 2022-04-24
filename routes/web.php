@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes                                    
 |--------------------------------------------------------------------------
-|
+|                                              
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
@@ -28,15 +28,15 @@ Route::get('/',[ShowController::class,'show']);
 Route::group(['middleware'=>'auth'],function(){
 
     
-    //Experience
-    Route::get('admin.create_experience',[ExperienceController::class,'create_experience']);
-    Route::post('store_experience',[ExperienceController::class,'store_experience']);
-    Route::delete('destroy_experience/{id}',[ExperienceController::class,'destroy_experience']);
-    Route::get('admin.show_experience/{id}',[ExperienceController::class,'show_experience']);
-    Route::put('admin.update_experience/{id}',[ExperienceController::class,'update_experience']);
+//Experience
+Route::get('admin.create_experience',[ExperienceController::class,'create_experience']);
+Route::post('store_experience',[ExperienceController::class,'store_experience']);
+Route::delete('destroy_experience/{id}',[ExperienceController::class,'destroy_experience']);
+Route::get('admin.show_experience/{id}',[ExperienceController::class,'show_experience']);
+Route::put('admin.update_experience/{id}',[ExperienceController::class,'update_experience']);
     
-    
-    //Education
+
+//Education
 Route::get('admin.create_education',[EducationController::class,'create_education']);
 Route::post('admin.store_education',[EducationController::class,'store_education']);
 Route::delete('admin.destroy_education/{id}',[EducationController::class,'destroy_education']);
@@ -60,8 +60,14 @@ Route::put('admin.update_profile/{id}',[ProfileController::class,'update_profile
 
 //Projects
 Route::get('admin.create_project',[ProjectController::class,'create_project']);
+Route::post('admin.store_project',[ProjectController::class,'store_project']);
+Route::delete('admin.destroy_project/{id}',[ProjectController::class,'destroy_project']);
+Route::get('admin.show_project/{id}',[ProjectController::class,'show_project']);
+Route::put('admin.update_project/{id}',[ProjectController::class,'update_project']);
+
 
 });
+
 //Pour Accéder au Register ou Login il faut mettre
 //admin_khatib_yasmine_123/login pour y accéder
 //on met un préfixe spécifique et long comme ça
