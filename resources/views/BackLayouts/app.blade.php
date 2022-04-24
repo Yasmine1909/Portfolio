@@ -62,18 +62,24 @@
                   <span class="item">Experience</span>
               </a>
           </li>
-          <li>
+          {{-- <li>
               <a href="#">
                   <span class="icon"><i class="fas fa-magic"></i></span>
                   <span class="item">Interests</span>
               </a>
-          </li>
+          </li> --}}
           <li>
+            <a href="/admin.create_project">
+                <span class="icon"><i class="fas fa-laptop"></i></span>
+                <span class="item">Projects</span>
+            </a>
+        </li>
+          {{-- <li>
               <a href="#">
                   <span class="icon"><i class="fas fa-brain"></i></span>
                   <span class="item">Skills</span>
               </a>
-          </li>
+          </li> --}}
           <li>
               <a href="#">
                   <span class="icon"><i class="fas fa-sign-out-alt"></i></span>

@@ -4,6 +4,7 @@ use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\AwardController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ShowController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -55,6 +56,10 @@ Route::post('admin.store_profile',[ProfileController::class,'store_profile']);
 Route::delete('admin.destroy_profile/{id}',[ProfileController::class,'destroy_profile']);
 Route::get('admin.show_profile/{id}',[ProfileController::class,'show_profile']);
 Route::put('admin.update_profile/{id}',[ProfileController::class,'update_profile']);
+
+
+//Projects
+Route::get('admin.create_project',[ProjectController::class,'create_project']);
 
 });
 //Pour Accéder au Register ou Login il faut mettre
