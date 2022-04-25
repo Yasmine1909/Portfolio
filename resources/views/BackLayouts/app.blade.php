@@ -33,43 +33,43 @@
       </div>
       <ul>
           <li>
-              <a href="/" class="active">
+              <a href="/" >
                   <span class="icon"><i class="fas fa-home"></i></span>
                   <span class="item">Home</span>
               </a>
           </li>
           <li>
-              <a href="admin.create_profile">
+              <a href="admin.create_profile" class="@if ($nav=='profile') active @endif">
                   <span class="icon"><i class="fas fa-user"></i></span>
                   <span class="item">Profile</span>
               </a>
           </li>
           <li>
-              <a href="admin.create_award">
+              <a href="admin.create_award" class="@if ($nav=='award') active @endif">
                   <span class="icon"><i class="fa fa-award"></i></span>
                   <span class="item">Awards & Certifications</span>
               </a>
           </li>
           <li>
-              <a href="/admin.create_education">
+              <a href="/admin.create_education" class="@if ($nav=='education') active @endif">
                   <span class="icon"><i class="fas fa-graduation-cap"></i></span>
                   <span class="item">Education</span>
               </a>
           </li>
           <li>
-              <a href="/admin.create_experience">
+              <a href="/admin.create_experience" class="@if ($nav=='experience') active @endif">
                   <span class="icon"><i class="fas fa-history"></i></span>
                   <span class="item">Experience</span>
               </a>
           </li>
           {{-- <li>
-              <a href="#">
+              <a href="#" class="@if ($nav=='interest') active @endif">
                   <span class="icon"><i class="fas fa-magic"></i></span>
                   <span class="item">Interests</span>
               </a>
           </li> --}}
           <li>
-            <a href="/admin.create_project">
+            <a href="/admin.create_project" class="@if ($nav=='project') active @endif">
                 <span class="icon"><i class="fas fa-laptop"></i></span>
                 <span class="item">Projects</span>
             </a>

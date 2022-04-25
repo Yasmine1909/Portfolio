@@ -9,7 +9,7 @@ class AwardController extends Controller
 {
     public function create_award(){
                                    
-        return view('BackOffice.create_award',['awards'=>Award::all()]);
+        return view('BackOffice.create_award',['awards'=>Award::all(),'nav'=>'award']);
     }
     
     public function store_award(Request $req){

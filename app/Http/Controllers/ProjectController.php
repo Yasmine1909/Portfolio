@@ -12,7 +12,7 @@ class ProjectController extends Controller
 {
     public function create_project()
     {
-        return view('BackOffice.create_project',['projects'=>Project::all()]);
+        return view('BackOffice.create_project',['projects'=>Project::all(),'nav'=>'project']);
     }
 
     public function store_project(ProjectRequest $req)
